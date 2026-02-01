@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}About | Dear Universe{% endblock %}
+
+{% block content %}
+<section class="about">
+    <h1>About Dear Universe</h1>
+ 
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    
+
+    <p class="about-text">
+        Dear Universe was created from a simple idea: clothing should speak quietly,
+        but with meaning. Every piece is designed to feel timeless, unisex, and bold
+        without shouting for attention.
+    </p>
+
+    <p class="about-text">
+        We believe fashion is not just about trends, but about identity, balance,
+        and confidence. Our collections are built for people who move through the
+        world with intention — curious, grounded, and unafraid to be themselves.
+    </p>
+
+    <p class="about-text">
+        Dear Universe is not fast fashion. It is thoughtful design, honest materials,
+        and silhouettes that live beyond seasons.
+    </p>
+</section>
+{% endblock %}
+

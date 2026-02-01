@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ product.name }} | Dear Universe{% endblock %}
+
+{% block content %}
+<div class="product-page">
+    <img src="{{ url_for('static', filename=product.image) }}" alt="{{ product.name }}">
+ 
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+   
+
+    <div class="product-info">
+        <h1>{{ product.name }}</h1>
+        <p class="price">{{ product.price }}</p>
+        <p class="description">{{ product.description }}</p>
+
+        <button class="btn">Add to Cart</button>
+    </div>
+</div>
+{% endblock %}
+

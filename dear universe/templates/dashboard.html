@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | Dear Universe{% endblock %}
+
+{% block content %}
+<section class="contact">
+    <h1>CEO Dashboard</h1>
+ 
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <div class="buttons">
+            <a href="{{ url_for('home') }}" class="btn">Home</a>
+    </div>
+
+    <p class="contact-subtitle">
+        Welcome back. Manage your universe.
+    </p>
+
+    <div style="margin-top:40px;">
+        <a href="#" class="btn">Add Product</a>
+        <a href="#" class="btn outline">View Messages</a>
+        <a href="{{ url_for('logout') }}" class="btn outline">Logout</a>
+    </div>
+</section>
+{% endblock %}
+ 

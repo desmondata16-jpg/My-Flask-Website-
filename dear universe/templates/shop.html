@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Collection | Dear Universe{% endblock %}
+
+{% block content %}
+<section class="collection">
+    <h1 class="collection-title">The Collection</h1>
+ 
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+
+    <div class="collection-grid">
+        {% for product in products %}
+        <a href="{{ url_for('product', product_id=product.id) }}" class="collection-item">
+            <div class="image-wrap">
+                <img src="{{ url_for('static', filename=product.image) }}" alt="{{ product.name }}">
+            </div>
+   
+            <div class="item-info">
+                <h3>{{ product.name }}</h3>
+                <span>{{ product.price }}</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | Dear Universe{% endblock %}
+
+{% block content %}
+<section class="contact">
+    <h1>Contact Us</h1>
+    <p class="contact-subtitle">
+        Questions, collaborations, or just saying hello —
+        the universe is listening.
+    </p>
+ 
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    
+    <form method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+{% endblock %}
+

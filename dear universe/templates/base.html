@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div class="buttons">
+            <a href="{{ url_for('home') }}" class="btn">Home</a>
+    </div><head>
+        
+    <meta charset="UTF-8">
+    <title>{% block title %}Dear Universe{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+
+
+<!-- Link CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+
+<body>
+
+
+
+{% block content %}{% endblock %}
+
+<footer class="footer">
+    <p>© 2026 Dear Universe. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+
+
